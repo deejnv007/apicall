@@ -6,6 +6,9 @@ const Detail = require("../src/db/conn");
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use("/", (req, res) =>{
+   res.send("oye hello");
+})
 
 app.post("/xyz", async (req, res) =>{
    const addingdetails = new Detail(req.body)
